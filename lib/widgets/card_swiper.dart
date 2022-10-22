@@ -1,4 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
+//o
+//import 'package:flutter_card_swipper/flutter_card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:peliculas/models/models.dart';
 
@@ -30,7 +32,7 @@ class CardSwiper extends StatelessWidget {
         layout: SwiperLayout.STACK,
         itemWidth: size.width * 0.6,
         itemHeight: size.height * 0.4,
-        itemBuilder: (context, int index) {
+        itemBuilder: (_, int index) {
           //print('movie.posterPath= ${movie.posterPath}');
           //print('movie.fullPosterImg= ${movie.fullPosterImg}');
 
