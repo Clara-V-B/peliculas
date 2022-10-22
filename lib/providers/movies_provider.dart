@@ -113,7 +113,9 @@ class MoviesProvider extends ChangeNotifier {
   void getSuggestionsByQuery(String searchTerm) {
     debouncer.value = '';
     debouncer.onValue = (value) async {
-      print('Tenemos valor a buscar: $value');
+      //print('Tenemos valor a buscar: $value');
+      final results = await this.searchMovies(value);
+      this._suggestionStreamContoller.add( results );
     };
 
     final timer = Timer.periodic(Duration(milliseconds: 300), (_) {
