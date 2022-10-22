@@ -15,13 +15,6 @@ class CreditResponse {
   List<Cast> cast;
   List<Cast> crew;
 
-  get fullProfilePath {
-    if (this.profilePath != null)
-      return 'https://image.tmdb.org/t/p/w500${this.profilePath}';
-
-    return 'htps://i.stack.imgur.com/GNhx0.png';
-  }
-
   factory CreditResponse.fromJson(String str) =>
       CreditResponse.fromMap(json.decode(str));
 
@@ -64,6 +57,13 @@ class Cast {
   int? order;
   String? department;
   String? job;
+
+  get fullProfilePath {
+    if (this.profilePath != null)
+      return 'https://image.tmdb.org/t/p/w500${this.profilePath}';
+
+    return 'htps://i.stack.imgur.com/GNhxO.png';
+  }
 
   factory Cast.fromJson(String str) => Cast.fromMap(json.decode(str));
 
